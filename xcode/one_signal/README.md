@@ -80,7 +80,7 @@ OneSignal = { url = "https://github.com/OneSignal/OneSignal-XCFramework", upToNe
 
 ```
 
-YourProject/project_dist/xcode/OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.swift
+YourProject/project_dist/xcode/OneSignalNotificationServiceExtension/NotificationService.swift
 
 ```swift
 // FILE: OneSignalNotificationServiceExtension/NotificationService.swift
