@@ -1,5 +1,5 @@
 
-pyproject.toml
+YourProject/pyproject.toml
 ```toml
 [project]
 name = "your_project"
@@ -60,7 +60,7 @@ extra_index = [
 [tool.psproject.macos]
 extra_index = []
 
-[tool.psproject.extra_targets.MyNotificationExtension]
+[tool.psproject.extra_targets.OneSignalNotificationServiceExtension]
 type = "app_extension"
 sources = []
 backends = []
@@ -68,19 +68,19 @@ dependencies = [
     { package = { products = ["OneSignalExtension"], reference = "OneSignal" } }
 ]
 
-[tool.psproject.extra_targets.MyNotificationExtension.entitlements]
+[tool.psproject.extra_targets.OneSignalNotificationServiceExtension.entitlements]
 "com.apple.security.application-groups" = ["group.org.pyswift.your_project.onesignal"]
 
-[tool.psproject.extra_targets.MyNotificationExtension.info_plist.NSExtension]
+[tool.psproject.extra_targets.OneSignalNotificationServiceExtension.info_plist.NSExtension]
 NSExtensionPointIdentifier = "com.apple.usernotifications.service"
-NSExtensionPrincipalClass = "MyNotificationExtension"
+NSExtensionPrincipalClass = "OneSignalNotificationServiceExtension"
 
 [tool.psproject.swift_packages]
 OneSignal = { url = "https://github.com/OneSignal/OneSignal-XCFramework", upToNextMajor = "5.4.1" }
 
 ```
 
-your_project/project_dist/xcode/MyNotificationExtension/MyNotificationExtension.swift
+YourProject/project_dist/xcode/OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.swift
 
 ```swift
 // FILE: OneSignalNotificationServiceExtension/NotificationService.swift
@@ -134,7 +134,7 @@ class NotificationService: UNNotificationServiceExtension {
 ```
 
 
-main.swift
+YourProject/project_dist/xcode/Sources/IphoneOS/main.swift
 ```swift
 import Foundation
 import PySwiftKit
